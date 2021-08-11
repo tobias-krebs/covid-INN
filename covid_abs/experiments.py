@@ -185,13 +185,13 @@ def batch_experiment(experiments, iterations, file, simulation_type=Simulation, 
             sim = simulation_type(**kwargs)
             sim.initialize()
             if columns is None:
-                statistics = sim.get_statistics(kind='all')
+                statistics = sim.get_statistics(kind='info')
                 columns = [k for k in statistics.keys()]
             for it in range(iterations):
                 if verbose == 'iterations':
                     print('Experiment {}\tIteration {}'.format(experiment, it))
                 sim.execute()
-                statistics = sim.get_statistics(kind='all')
+                statistics = sim.get_statistics(kind='info')
                 statistics['iteration'] = it
                 rows.append(statistics)
         except Exception as ex:
@@ -204,12 +204,12 @@ def batch_experiment(experiments, iterations, file, simulation_type=Simulation, 
         try:
             df2 = df[(df['iteration'] == it)]
             for col in columns:
-                row = [it, col, df2[col].values.min(), df2[col].values.mean(), df2[col].values.std(), df2[col].values.max()]
+                row = [it, col, df2[col].values.mean()]
                 rows2.append(row)
         except Exception as ex:
             print(ex)
 
-    df2 = pd.DataFrame(rows2, columns=['Iteration', 'Metric', 'Min', 'Avg', 'Std', 'Max'])
+    df2 = pd.DataFrame(rows2, columns=['Iteration', 'Metric', 'Avg'])
 
     df2.to_csv(file, index=False)
 
