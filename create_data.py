@@ -33,4 +33,4 @@ for i in range(1000000):
     state_dict["amp_inf"] = amps[Status.Infected]
      
     params = pd.DataFrame(state_dict, index=[0])
-    params.to_csv(f"params/params{i}.csv", index = False)
+    params.to_csv(f"params2/params{i}.csv", index = False)
