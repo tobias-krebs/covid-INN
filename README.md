@@ -1,6 +1,8 @@
 # covid-INN
  Parameter estimation using INNs
  
+ This repo contains the code base for the final project of the advance machine learning lecture held by Ullrich Köthe at the Heidelber university in the summer semester 2021. IF you are interested in the associated report, feel free to email the 
+ 
  create_data.py can be used to generate more training data. This uses the code in covid_abs taken from https://bit.ly/COVID19_ABSsystem.
  
  Also included is the FrEIA package from https://github.com/VLL-HD/FrEIA with some modifications described in the report.
