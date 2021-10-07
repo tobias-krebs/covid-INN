@@ -9,6 +9,4 @@
  
  We only include subsets of our used training data, as the whole sets were too large to upload here. With the included subsets, at least the notebooks can be executed however results may be different from what we present in the report due to the lower statistic. 
  
- There is a notebook for every data set used, labeled accordingly set_1 to set_3. All further details on what exactly was the difference between the data sets is also included in the report
- 
- 
+ There is a notebook for every data set used, labeled accordingly set_1 to set_3 and toy_problem. All further details on what exactly was the difference between the data sets is also included in the report.
