@@ -1,0 +1,2 @@
+initial_infected_perc,initial_immune_perc,length,height,population_size,contagion_distance,critical_limit,amp_susc,amp_rec,amp_inf,response
+0.03175544360372295,0.0534177505538784,100,100,118,5,0.05,10.659634208486882,15.255157713085268,16.070995703836534,0.007656817641335334
